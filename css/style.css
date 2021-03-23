@@ -1,0 +1,17 @@
+/* img {
+    transform:rotate(-10deg);
+    width:75%;
+    padding: 3px;
+    position: relative;
+    filter: grayscale(0.75);
+    transition-property: filter;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+/*got from professor*/
+/* }
+
+@media all and (prefers-reduced-motion: reduce){
+    img{
+        animation:none
+    }
+} */ 
