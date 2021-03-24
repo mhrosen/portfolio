@@ -4,21 +4,24 @@ html{
     /* very satisfying */
 }
 
-main {
+body  {
     background-color: #005596;
 }
-
 
 footer{
     text-align: center;
     margin-bottom: 20px;
     margin-top: 34px;
+    border-top: 8px solid black;
+    border-bottom: 8px solid black;
 }
 
 
 footer > p{
     background-color: #fff;
+    padding: 3px;
 }
+
 /* I used rgba to add opacity */
 
 
@@ -51,24 +54,10 @@ CHANGES WERE MADE ... */
 /* NAVIGATION */
 /* I will attempt to make 2 columns in mobile view where the top, center element is the current page*/
 /* In desktop version, maybe I will play with the spacing or can consider doing the same thing if it looks ok */
-
-ul{
-    display: grid;
-    grid-template-columns: repeat(50px, 3);
-    grid-gap: 17px;
-    justify-items: center;
-    justify-content: center;
-    margin-right: 40px;
-
+nav{
+    background-color: #005596;
+    
 }
-
-/* Reference: hw5 */
-/* REFERENCE: https://css-tricks.com/snippets/css/complete-guide-grid/ */
-/* REFERENCE: https://www.w3schools.com/cssref/pr_grid-gap.asp */
-/* REFERENCE: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows */
-
-
-/* NOTABLE PEOPLE PAGE */
 #notable_nav{
     margin-bottom: 20px;
     margin-top: 34px;
@@ -91,6 +80,26 @@ ul{
     grid-column: 1 / 3;
 }
 
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(50px, 3);
+    grid-gap: 17px;
+    justify-items: center;
+    justify-content: center;
+    margin-right: 40px;
+
+}
+
+/* Reference: hw5 */
+/* REFERENCE: https://css-tricks.com/snippets/css/complete-guide-grid/ */
+/* REFERENCE: https://www.w3schools.com/cssref/pr_grid-gap.asp */
+/* REFERENCE: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows */
+
+
+/* NOTABLE PEOPLE PAGE */
+
+
 .fig-notable{
     border: thin #E7A614 solid;
     background-color: burlywood;
@@ -104,7 +113,6 @@ ul{
     /* margin: top right bottom left */
 }
 .spacebetween{
-    border: thin #fff solid;
     background-color: #fff;
     color: #fff;
     display: flex;
@@ -160,9 +168,18 @@ Base code changed to include font size, colors, padding size, img transformation
 
 }
 h1{
-    margin-top: 25px;
-    
+    /* margin-left: 10px; */
+    background-color: #fff;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    display: block;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
+
 
 /* p{
     background-color:  burlywood;
@@ -184,6 +201,7 @@ h1{
 }
 #people-photos h2{
     padding-top: 10px;
+    margin-left: 10px;
     font-family: 'Della Respira', serif;
     color: cornsilk;
     font-size: 1.5em;
@@ -207,7 +225,7 @@ h1{
 
 .fig-notable{
     border: thin #E7A614 solid;
-    background-color: #E7A614;
+    background-color: burlywood;
     display: flex;
     flex-flow: column;
     padding: 5px;
