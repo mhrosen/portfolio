@@ -1,3 +1,48 @@
+/* REFERENCE: Phi Kappa Phi Color Scheme (i.e. hex codes) https://pikapp.org/wp-content/uploads/2018/06/PKP-BrandGuidelines-v1.pdf */
+
+/* NOTABLE PEOPLE PAGE */
+.fig-notable{
+    border: thin #E7A614 solid;
+    background-color: #E7A614;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 240px;
+    /* Increased max width from 220px to 240px */
+    margin: auto auto 7px auto;
+    /* margin: top right bottom left */
+}
+
+.fig-notable > img {
+    max-width: 240px;
+    max-height: 150px;
+    /* Increased max width from 220px to 240px */
+}
+
+.fig-notable > figcaption {
+    background-color: #005596;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+.fig-notable > h3{
+    text-align: center;
+    background-color: #005596;
+    color: #fff;
+
+
+}
+/* CHANGE CODE ABOVE!, copied from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure*/
+
+/* Jimmy Carter Image */
+/* .fig-notable > #fix-photo1{
+    max-width: 200px;
+    max-height: 170px;
+
+} */
+
+
 /* img {
     transform:rotate(-10deg);
     width:75%;
