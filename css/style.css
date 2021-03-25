@@ -262,6 +262,9 @@ nav a:active{
     grid-row: 2 / 2;
 
 }
+/* UPPER CASE CURRENT NAV, same order */
+
+
 
 div.skip a{
     background: white;
