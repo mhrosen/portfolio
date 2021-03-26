@@ -265,24 +265,27 @@ nav a:active{
 /* UPPER CASE CURRENT NAV, same order */
 
 
-
-div.skip a{
+a.skip{ 
+    /* Got skip from hw6 */
     background: white;
     left: 0;
-    padding: 7px;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
-    position: absolute;
-    top: -50px;
-
   }
- 
-  div.skip a:focus{
-    position: absolute;
-    top: 10px;
+  
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
   }
-
+  
+  *:focus{
+    border: 2px solid black;
+  }
 
 /* Reference: hw5 */
 /* REFERENCE: https://css-tricks.com/snippets/css/complete-guide-grid/ */
