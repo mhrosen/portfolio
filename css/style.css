@@ -4,7 +4,7 @@
 /* Put javascript at the very end of your code (with script tag) */
 
 
-@media only screen and (max-width:600px){ 
+@media only screen and (max-width:600px){  
 html{
     scroll-behavior: smooth; 
     /* very satisfying */
@@ -265,27 +265,40 @@ nav a:active{
 /* UPPER CASE CURRENT NAV, same order */
 
 
+/* Got skip from hw6, will change code later */
 a.skip{ 
-    /* Got skip from hw6 */
+    
     background: white;
     left: 0;
-    padding: 6px;
+    padding: 2px; 
     position: absolute;
-    top: -40px;
+    /* top: -40px; */
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
+    transform: translateY(-100%); 
+    -webkit-transition: translateY(-100%);
+    transition: 0.5s;
+    /* TranslateY hides content until tab*/
+    
+
   }
   
   a.skip:focus{
     top:20px;
     color: black;
     text-decoration-style: solid;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    /* TranslateY hides content until tab*/
+    /* Reference: https://css-tricks.com/how-to-create-a-skip-to-content-link/*/
+
   }
-  
-  *:focus{
+
+ /* *:focus{
     border: 2px solid black;
-  }
+  }  */
+
 
 /* Reference: hw5 */
 /* REFERENCE: https://css-tricks.com/snippets/css/complete-guide-grid/ */
@@ -340,7 +353,7 @@ a.skip{
     padding: 3px;
     text-align: center;
 }
-.fig-notable > h3{
+.fig-notable > h3, .fig-notable > h2{
     text-align: center;
     font-size: 1.1em; 
     /* added */
@@ -395,7 +408,8 @@ h1{
     background-color: #fff;
     
 }
- h2{
+.h2{
+    /* Created class h2 (instead of just using h2 tag) because one of the spacebetween elements must use h2 to satisfy axe validator and heading levels  */
     padding-top: 10px;
     margin-left: 10px;
     font-family: 'Della Respira', serif;
@@ -441,7 +455,9 @@ h1{
     
   } 
 
-}
+/* Product card reference: https://www.freecodecamp.org/news/horizontal-scrolling-using-flexbox-f9d16817f742/ and https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure  */
+
+ } 
 
 
 /* img {
@@ -568,8 +584,8 @@ h1{
     }
 /* REFERENCE pointer-events to turn off hover: https://stackoverflow.com/questions/5069110/remove-hover-css-behavior-from-element */
     .skip a{
-      -webkit-transition: none; /* sets to default setting */
-      transition: none;        /* sets to default setting */
+      -webkit-transition: none;
+      transition: none;        
      }
   
     /*Turn off parallax*/

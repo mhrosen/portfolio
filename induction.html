@@ -14,6 +14,7 @@
 
   <body>
     <a class = "skip" href="#main">Skip to Main Content</a>
+    <header>
       <nav>
         <ul class="nav_links">
           <li id="nav_induction1"><a href="index.html">About</a></li>
@@ -22,12 +23,10 @@
           <li id="nav_induction4"><a href="notablepeople.html">People</a></li>
         </ul>
     </nav>
-    <header id="main">
-      <h1>Induction Ceremony</h1>
-    </header>
+  </header>
 
-    <main>
-      
+    <main id="main">
+      <h1>Induction Ceremony</h1>
       <p class = "intro-para">Prior to 2020, university chapters held in-person ceremonies to induct new members.
         With campus closures and challenges associated with COVID-19 and physical
         distancing requirements, the Society has created opportunities to celebrate your achievements and 
@@ -36,11 +35,13 @@
         and other professional opportunities. We want to celebrate you and all you have achieved! 
       </p>
       <figure class="spacebetween">
-        <h3>Text</h3>
+        <h2>Text</h2>
+        <!-- Created h2 class specifically to not modify this element with big, cornsilk text -->
         <figcaption>Text<br> 
             </figcaption>
         </figure>
-      <h2>Past Induction Festivities</h2>
+      <h2 class="h2">Past Induction Festivities</h2>
+      <!-- Created class h2 because one of the spacebetween elements must use h2 to satisfy axe validator and heading levels -->
       <div class="grid-container">
         <img src="imgs/pkp3_annualbanquet.jpg" alt="People sitting at tables eating">
         <!-- CREDIT: https://pkp.msu.edu/events/annual-initiation-ceremony/2008-annual-initiation-ceremony -->
