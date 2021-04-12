@@ -7,7 +7,7 @@
 /* HOW TO GET THE EXTRA 15% */
 /* Animation for navigation */
 /* Use flip card in the people -- add more information*/
-@media only screen and (max-width:600px){  
+@media only screen and (min-width:600px){  
 
 
 html{
@@ -554,16 +554,68 @@ CHANGES WERE MADE ... */
 #about-img{
     display: flex;
     justify-content: flex-start;
-    width: 95%;
-    height: 85%;
+    flex-wrap: nowrap;
+    width: 715px;
+    height: 450px;
     margin-top: 1.7em;
-    margin-bottom: 2.5em;
+    margin-bottom: 1.5em;
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
-    border-bottom: 5px solid black;
+    border: 5px solid black;
+    border-bottom: 10px solid black;
     
 }
+.about-flip{
+    perspective: 1000px;
+    
+} 
+/* !completely! different code from flip reference above */
+
+
+.about-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+/* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp , changed class name and transition time */
+
+.about-front:hover .about-inner {
+    transform: rotateY(180deg);
+}
+
+/* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp ,
+Changed class names */
+
+
+ .about-front, .about-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  /* .about-front {
+    background-color: ;
+    color: white;
+  } */
+
+  
+  /* Style the back side */
+  .about-back {
+    background-color: #005690;
+    color: white;
+    transform: rotateY(180deg);
+  }
+/* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp ,
+changed class name, background color*/
+
+
+
+
 
 /* Induction */
 #grid-container{
@@ -759,11 +811,13 @@ Base code changed to include font size, colors, padding size, img transformation
     background-color: burlywood;
     margin: 25px;
     border-width: thick;
-    border-bottom-style: solid;
-    line-height: 20px;
+    border: 5px;
+    border-bottom: 10px;
+    border-style: solid;
+    line-height: 30px;
     padding: 10px;
     padding-right: 7px;
-    font-size: 150%;
+    font-size: 135%;
 }
 
 
