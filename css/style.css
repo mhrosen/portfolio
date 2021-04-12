@@ -567,7 +567,7 @@ CHANGES WERE MADE ... */
     
 }
 .about-flip{
-    perspective: 1000px;
+    perspective: 1200px;
     
 } 
 /* !completely! different code from flip reference above */
@@ -578,13 +578,14 @@ CHANGES WERE MADE ... */
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform 1s;
     transform-style: preserve-3d;
   }
 /* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp , changed class name and transition time */
 
-.about-front:hover .about-inner {
+.about-flip:hover .about-inner {
     transform: rotateY(180deg);
+    transition: transform 0.4s;
 }
 
 /* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp ,
@@ -598,17 +599,18 @@ Changed class names */
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
   }
-  /* .about-front {
-    background-color: ;
-    color: white;
-  } */
+ 
 
-  
+  .about-front {
+    background-color: #bbb;
+    color: black;
+  }
   /* Style the back side */
   .about-back {
     background-color: #005690;
     color: white;
     transform: rotateY(180deg);
+    transition: transform 0.4s;
   }
 /* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp ,
 changed class name, background color*/
