@@ -806,8 +806,8 @@ a.skip{
 /* Increased max width from 220px to 240px */
 
 .fig-notable > img {
-    max-width: 240px;
-    max-height: 150px;
+    width: 240px;
+    height: 150px;
     transform: translate(1%, 0%);
     /* REFERENCE: I previously could not center my images without centering the h3 and paragraph
      text (which would ruin the blue highlight running across the screen). I used translate to center
