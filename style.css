@@ -7,7 +7,7 @@
 /* HOW TO GET THE EXTRA 15% */
 /* Animation for navigation */
 /* Use flip card in the people -- add more information*/
-@media only screen and (max-width:600px){  
+@media only screen and (min-width:600px){  
 
 
 html{
@@ -435,7 +435,7 @@ h1{
     transition-timing-function: linear;
 /*got from professor*/
 
-@media screen and (min-width: 640px){
+@media screen and (min-width: 765px){
 /* Dimensions Reference: https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile */
 
 html{
@@ -639,8 +639,9 @@ nav a:active{
 
 /* Got skip from hw6, will change code later */
 a.skip{ 
-    
-    background: white;
+    font-size: 1.3em;
+    background: burlywood; 
+    /* changed skip with color */
     left: 0;
     padding: 2px; 
     position: absolute;
@@ -723,7 +724,7 @@ a.skip{
 .fig-notable > img {
     max-width: 240px;
     max-height: 150px;
-    transform: translate(25%, 0%);
+    transform: translate(1%, 0%);
     /* REFERENCE: I previously could not center my images without centering the h3 and paragraph
      text (which would ruin the blue highlight running across the screen). I used translate to center
      the image within the .fig-notable cards
@@ -743,8 +744,8 @@ a.skip{
 }
 .fig-notable > h3, .fig-notable > h2{
     text-align: center;
-    font-size: 150%;
-    padding: 1%;
+    font-size: 140%;
+    padding: 3%;
     /* added font-size and padding */
     background-color: #005596;
     color: #fff;
@@ -802,10 +803,12 @@ h1{
 .h2{
     /* Created class h2 (instead of just using h2 tag) because one of the spacebetween elements must use h2 to satisfy axe validator and heading levels  */
     padding-top: 20px;
+    padding-bottom: 15px;
     margin-left: 20px;
     font-family: 'Della Respira', serif;
     color: cornsilk;
     font-size: 170%;
+    text-align: center;
 } 
 
 
@@ -819,7 +822,12 @@ h1{
   }
 /* USE OF GRID!! */
 
+.public-service{
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(4,80px);
 
+}
 
   .product-image img{
     max-height: 150px;
@@ -852,7 +860,7 @@ h1{
 
 }
 
-/* IPAD PRO */
+/* IPAD PRO AND DESKTOP */
 @media screen and (min-width: 1024px){
     html{
         scroll-behavior: smooth; 
@@ -1057,6 +1065,7 @@ h1{
     a.skip{ 
         
         background: white;
+        
         left: 0;
         padding: 2px; 
         position: absolute;
@@ -1103,7 +1112,7 @@ h1{
         display: flex;
         flex-flow: column;
         padding: 20px;
-        max-width: 30%;
+        max-width: 42%;
         /* Increased max width from 220px to 240px */
         margin: auto auto 7px auto;
     
@@ -1137,8 +1146,9 @@ h1{
     /* Increased max width from 220px to 240px */
     
     .fig-notable > img {
-        max-width: 240px;
-        max-height: 150px;
+        max-width: 141px;
+        max-height: 200px;
+        object-fit: fill;
         transform: translate(15%, 0%);
         /* REFERENCE: I previously could not center my images without centering the h3 and paragraph
          text (which would ruin the blue highlight running across the screen). I used translate to center
@@ -1148,10 +1158,10 @@ h1{
         /* Increased max width from 220px to 240px */
     }
 
-    
-    .public-service{
+
+    /* .public-service{
         flex-direction:row;
-    }
+    } */
 
     .fig-notable > figcaption {
         background-color: #005596;
@@ -1164,8 +1174,8 @@ h1{
     }
     .fig-notable > h3, .fig-notable > h2{
         text-align: center;
-        font-size: 170%;
-        padding: 1.5%;
+        font-size: 145%;
+        padding: 5%;
         /* added font-size and padding */
         background-color: #005596;
         color: #fff;
@@ -1273,108 +1283,6 @@ h1{
 }
 
 /* DESKTOP */
-@media screen and (min-width: 1025px){
-/* Dimensions Reference: https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile */
-
-
-.fig-notable{
-    border: thin #E7A614 solid;
-    background-color: burlywood;
-    display: flex;
-    flex-flow: column;
-    padding: 5px;
-    max-width: 240px;
-    /* Increased max width from 220px to 240px */
-    margin: auto auto 7px auto;
-    /* margin: top right bottom left */
-}
-
-.fig-notable > img {
-    max-width: 240px;
-    max-height: 150px;
-    /* Increased max width from 220px to 240px */
-}
-
-.fig-notable > figcaption {
-    background-color: #005596;
-    color: #fff;
-    font: italic smaller sans-serif;
-    /* font-size: 150%;  */
-    padding: 3px;
-    text-align: center;
-}
-.fig-notable > h3{
-    text-align: center;
-    font-size: 150%; 
-    /* added */
-    background-color: #005596;
-    color: #fff;
-
-
-    }
- 
-    .product-card {
-        display: grid; 
-        grid-template-columns: repeat(1, 50px);
-        grid-template-rows: repeat(6, 50px);
-        grid-row: 1 / 2; 
-        grid-column: 2 / 3;
-        padding: 2%;
-      }
-    
-      .product-image img{
-        max-height: 200px;
-        max-width: 200px;
-    
-      }
-    
-      .product-info {
-        margin-top: auto;
-      }
-      .product-info > h3{
-          background-color: #fdefb2;
-      }
-      .product-info > h4{
-        background-color: #F6E481;
-    }
-    .product-card {
-        display: grid; 
-        grid-template-columns: repeat(1, 50px);
-        grid-template-rows: repeat(6, 50px);
-        grid-row: 1 / 2; 
-        grid-column: 2 / 3;
-        padding: 2%;
-      }
-    
-      .product-image img{
-        max-height: 200px;
-        max-width: 200px;
-    
-      }
-    
-      .product-info {
-        margin-top: auto;
-      }
-      .product-info > h3{
-        font-size: 150%; 
-        background-color: #fdefb2;
-      }
-      .product-info > h4{
-        font-size: 150%; 
-        background-color: #F6E481;
-    }
-    .scroll { 
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-        
-      }
-    
-    .product-card {
-        display: inline-block;
-      } 
-
-
 
 @media all and (prefers-reduced-motion: reduce){
     img{
