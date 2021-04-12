@@ -641,30 +641,28 @@ div.grid-container > img{
 /* In desktop version, maybe I will play with the spacing or can consider doing the same thing if it looks ok */
 nav{
     background-color: #005596;
-    
+    padding: 30px;
 }
 
 
 /* Turns nav into all caps on current page*/
 nav li{
     display:inline;
-    /* padding-right:20px;  */
+    padding-right:20px;
+    font-size: 1.4em; 
     /* From hw 5 */
   }
 nav ul{
     list-style: none; /* From hw 5 */
     display: grid;
-    grid-gap: 15px;
-    justify-items: center;
     justify-content: center;
-    /* grid-template-columns: 1; */
-    /* grid-template-rows: 4; */
+    grid-template-columns: 4; 
+    grid-template-rows: 1;
     padding-top: 20px;
     margin-bottom:-20px;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-columns:   1fr 1fr 1fr 1fr;
     /* margin-right: 40px; */
-
 }
 /* UL (above) was all original except list-style*/
 nav a{
@@ -674,20 +672,52 @@ nav a{
 }
 
 
-nav a:active{
-    /* text-decoration-style: double; */
-    text-decoration: none;
+
+
+nav a{
+
+    font-size: 1.5em;
+    background-color: #00022e;
+    padding: 0.7em;
+    padding-bottom: 18px;
+}
+nav a:hover{
+    text-decoration-style: double;
+    background-color: burlywood;
+    padding: 30px;
+    color: black;
+
 
 }
 .current-nav{
     text-transform: uppercase;
-    font-size: 140%;
+    font-size: 1.31em;
 }
 #current-nav-induct{
     text-transform: uppercase;
-    font-size: 120%;
-    /* Induction is too large at 1.4 em so I used 1.2 instead */
+    font-size: 1.31em;
 }
+
+
+
+/* .current-nav a:hover{
+
+    font-size: 1.0em;
+    background-color: #00022e;
+    padding: 15px;
+    padding-bottom: 18px;
+}
+
+#current-nav-induct a:hover{
+
+    font-size: 1.0em;
+    background-color: #00022e;
+    padding: 15px;
+    padding-bottom: 18px;
+} */
+
+
+/* I DO NOT CHANGE TEXT SIZE OF CURRENT PAGE IN TABLET OR DESKTOP*/
 /* UPPER CASE CURRENT NAV, same order */
 
 
