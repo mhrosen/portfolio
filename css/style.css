@@ -572,8 +572,7 @@ CHANGES WERE MADE ... */
 } 
 /* !completely! different code from flip reference above */
 
-
-.about-flip-inner {
+.about-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -588,12 +587,12 @@ CHANGES WERE MADE ... */
     transition: transform 0.4s;
 }
 
+
 /* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp ,
 Changed class names */
 
 
  .about-front, .about-back {
-    position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden; 
@@ -607,14 +606,36 @@ Changed class names */
   }
   /* Style the back side */
   .about-back {
-    background-color: #005690;
-    color: white;
+    background-color: burlywood;
+    color: black;
     transform: rotateY(180deg);
-    transition: transform 0.4s;
+    justify-content: center;
+    perspective: 1200px;
+    align-self: center;
+    width: 725px;
+    height: 460px;
+    margin: 20px;
+    margin-top: -460px;
+    padding-bottom: 10px;
+    /* text box too low/right compared to image */
+    font-size: 2em;
+    border: 5px solid black;
+    border-bottom: 10px solid black;
   }
+
 /* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp ,
 changed class name, background color*/
 
+
+#back-img{
+  opacity: 0.7;
+  width: 60%;
+  height: 60%;
+  border: 5px solid black;
+  border-bottom: 10px solid black;
+}
+
+/* Above is my own original idea added onto the flipcad with back-img */
 
 
 
@@ -815,6 +836,11 @@ a.skip{
     https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
     
     /* Increased max width from 220px to 240px */
+}
+
+.person-img{
+  width: 240px;
+  transform: translate(1%, 0%);
 }
 
 .fig-notable > figcaption {
@@ -1393,6 +1419,14 @@ h1{
     header{
       background-attachment: initial;
     }
+    .about-flip:hover, .about-inner, .about-back, .about-front, .about-flip{
+      transition: transform none;
+      -webkit-transition: transform none; /* sets to default setting */
+  
+  }
+  
+   }
+
 
 }
 /* From HW5 */
