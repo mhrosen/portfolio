@@ -7,8 +7,10 @@
 /* HOW TO GET THE EXTRA 15% */
 /* Animation for navigation */
 /* Use flip card in the people -- add more information*/
-@media only screen and (min-width:600px){  
 
+#about-img{
+  display: none;
+}
 
 html{
     scroll-behavior: smooth; 
@@ -419,7 +421,7 @@ h1{
     display: inline-block;
     
   } 
-}
+
 /* Product card reference: https://www.freecodecamp.org/news/horizontal-scrolling-using-flexbox-f9d16817f742/ and https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure  */
 
 
@@ -1420,15 +1422,19 @@ h1{
       background-attachment: initial;
     }
     .about-flip:hover, .about-inner, .about-back, .about-front, .about-flip{
-      transition: transform none;
-      -webkit-transition: transform none; /* sets to default setting */
+      transform: none;
+      transition: none;
+      -webkit-transition: none; /* sets to default setting */
   
+  }
+  #about-img{
+    display: none;
   }
   
    }
 
 
-}
+
 /* From HW5 */
 
 /* ADD TO TABLET AND DESKTOP */
