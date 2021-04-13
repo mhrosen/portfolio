@@ -7,8 +7,17 @@
 /* HOW TO GET THE EXTRA 15% */
 /* Animation for navigation */
 /* Use flip card in the people -- add more information*/
-@media only screen and (min-width:600px){  
 
+#about-img{
+  display: none;
+}
+#back-img{
+  display: none;
+
+}
+.about-back {
+  visibility: hidden;
+}
 
 html{
     scroll-behavior: smooth; 
@@ -254,16 +263,14 @@ a.skip{
 
 
 .fig-notable{
-    border: thin #E7A614 solid;
-    background-color: burlywood;
+    /* border: thin #E7A614 solid; */
+    /* background-color: burlywood; */
     display: flex;
     flex-flow: column;
-    padding: 5px;
+    /* padding: 5px; */
     max-width: 100%;
-    /* Increased max width from 220px to 240px */
     margin: auto auto 7px auto;
-
-    /* margin: top right bottom left */
+    margin-top: 10px;
 }
 .spacebetween{
     background-color: #fff;
@@ -296,13 +303,17 @@ a.skip{
     max-width: 240px;
     max-height: 150px;
     transform: translate(25%, 0%);
+
+  }
+
+
     /* REFERENCE: I previously could not center my images without centering the h3 and paragraph
      text (which would ruin the blue highlight running across the screen). I used translate to center
      the image within the .fig-notable cards
     https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
     
     /* Increased max width from 220px to 240px */
-}
+
 
 .fig-notable > figcaption {
     background-color: #005596;
@@ -349,19 +360,6 @@ h1{
     padding-top: 10px;
     padding-bottom: 5px;
 }
-
-
-/* p{
-    background-color:  burlywood;
-    margin-top: -1px;
-    margin-bottom: 5px;
-    margin-left: 6px;
-    margin-right: 6px;
-    border-width: thick;
-    border-bottom-style: solid;
-    border-bottom-width: thick 30px;
-} */ 
-
 
 
 
@@ -419,7 +417,7 @@ h1{
     display: inline-block;
     
   } 
-}
+
 /* Product card reference: https://www.freecodecamp.org/news/horizontal-scrolling-using-flexbox-f9d16817f742/ and https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure  */
 
 
@@ -514,38 +512,7 @@ a:hover, a:hover, a:active, a.visited{
   /* REFERENCE: https://www.codegrepper.com/code-examples/html/how+to+make+horizontal+scroll+in+css for horizontal scrolling. Modified class names (specific to my code) and also
 a class cannot be inside another class, so I corrected the syntax*/
 
-  /* .scroll div {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 5s linear infinite;
-} */
-/* ANIMATION INFINITE SCROLL: REFERENCE https://stackoverflow.com/questions/45847392/pure-css-continuous-horizontal-text-scroll-without-break */
 
-
-
-
-
-  /* .product-card {
-    display: inline-block;
-  }
-  @keyframes marquee {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(-100%, 0);
-    }
-  } */
-
-  /* ANIMATION INFINITE SCROLL: REFERENCE https://stackoverflow.com/questions/45847392/pure-css-continuous-horizontal-text-scroll-without-break */
-
-
-
-
-
-
-/* REFERENCE: code from https://css-tricks.com/designing-a-product-page-layout-with-flexbox/
-CHANGES WERE MADE ... */
 
 
 
@@ -554,16 +521,92 @@ CHANGES WERE MADE ... */
 #about-img{
     display: flex;
     justify-content: flex-start;
-    width: 95%;
-    height: 85%;
+    flex-wrap: nowrap;
+    width: 715px;
+    height: 450px;
     margin-top: 1.7em;
-    margin-bottom: 2.5em;
+    margin-bottom: 1.5em;
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
-    border-bottom: 5px solid black;
+    border: 5px solid black;
+    border-bottom: 10px solid black;
     
 }
+.about-flip{
+    perspective: 1200px;
+    
+} 
+/* !completely! different code from flip reference above */
+
+.about-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+/* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp , changed class name and transition time */
+
+.about-flip:hover .about-inner {
+    transform: rotateY(180deg);
+    transition: transform 0.4s;
+}
+
+
+/* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp ,
+Changed class names */
+
+
+ .about-front, .about-back {
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+ 
+
+  .about-front {
+    background-color: #bbb;
+    color: black;
+  }
+  /* Style the back side */
+  .about-back {
+    background-color: burlywood;
+    color: black;
+    transform: rotateY(180deg);
+    justify-content: center;
+    perspective: 1200px;
+    align-self: center;
+    width: 725px;
+    height: 460px;
+    margin: 20px;
+    margin-top: -460px;
+    padding-bottom: 10px;
+    /* text box too low/right compared to image */
+    font-size: 2em;
+    border: 5px solid black;
+    border-bottom: 10px solid black;
+  }
+
+/* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp ,
+changed class name, background color*/
+
+
+#back-img{
+  display: block;
+  opacity: 0.7;
+  width: 60%;
+  height: 60%;
+  border: 5px solid black;
+  border-bottom: 10px solid black;
+}
+
+/* Above is my own original idea added onto the flipcad with back-img */
+
+
+
 
 /* Induction */
 #grid-container{
@@ -587,30 +630,28 @@ div.grid-container > img{
 /* In desktop version, maybe I will play with the spacing or can consider doing the same thing if it looks ok */
 nav{
     background-color: #005596;
-    
+    padding: 30px;
 }
 
 
 /* Turns nav into all caps on current page*/
 nav li{
     display:inline;
-    /* padding-right:20px;  */
+    padding-right:20px;
+    font-size: 1.4em; 
     /* From hw 5 */
   }
 nav ul{
     list-style: none; /* From hw 5 */
     display: grid;
-    grid-gap: 15px;
-    justify-items: center;
     justify-content: center;
-    /* grid-template-columns: 1; */
-    /* grid-template-rows: 4; */
+    grid-template-columns: 4; 
+    grid-template-rows: 1;
     padding-top: 20px;
     margin-bottom:-20px;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-columns:   1fr 1fr 1fr 1fr;
     /* margin-right: 40px; */
-
 }
 /* UL (above) was all original except list-style*/
 nav a{
@@ -620,21 +661,25 @@ nav a{
 }
 
 
-nav a:active{
-    /* text-decoration-style: double; */
-    text-decoration: none;
 
+
+nav a{
+
+    font-size: 1.5em;
+    background-color: #00022e;
+    padding: 0.7em;
+    padding-bottom: 18px;
 }
+
 .current-nav{
     text-transform: uppercase;
-    font-size: 140%;
+    font-size: 1.31em;
 }
 #current-nav-induct{
     text-transform: uppercase;
-    font-size: 120%;
-    /* Induction is too large at 1.4 em so I used 1.2 instead */
+    font-size: 1.31em;
 }
-/* UPPER CASE CURRENT NAV, same order */
+
 
 
 /* Got skip from hw6, will change code later */
@@ -683,14 +728,14 @@ a.skip{
 
 
 .fig-notable{
-    border: thin #E7A614 solid;
-    background-color: burlywood;
+    /* border: thin #E7A614 solid;
+    background-color: burlywood; */
     display: flex;
     flex-flow: column;
-    padding: 20px;
+    /* padding: 20px; */
     max-width: 50%;
-    /* Increased max width from 220px to 240px */
     margin: auto auto 7px auto;
+    margin-top: 20px;
 
     /* margin: top right bottom left */
 }
@@ -719,18 +764,21 @@ a.skip{
     margin: auto auto 5px auto;
 
 }
-/* Increased max width from 220px to 240px */
+
 
 .fig-notable > img {
-    max-width: 240px;
-    max-height: 150px;
-    transform: translate(1%, 0%);
-    /* REFERENCE: I previously could not center my images without centering the h3 and paragraph
-     text (which would ruin the blue highlight running across the screen). I used translate to center
-     the image within the .fig-notable cards
-    https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
+    width: 240px;
+    height: 150px;
+    transform: scale(1.2);
+    /* REFERENCE:https://stackoverflow.com/questions/15685666/changing-image-sizes-proportionally-using-css
+    increased image size*/
     
     /* Increased max width from 220px to 240px */
+}
+
+.person-img{
+  width: 240px;
+  transform: translate(1%, 0%);
 }
 
 .fig-notable > figcaption {
@@ -759,11 +807,13 @@ Base code changed to include font size, colors, padding size, img transformation
     background-color: burlywood;
     margin: 25px;
     border-width: thick;
-    border-bottom-style: solid;
-    line-height: 20px;
+    border: 5px;
+    border-bottom: 10px;
+    border-style: solid;
+    line-height: 30px;
     padding: 10px;
     padding-right: 7px;
-    font-size: 150%;
+    font-size: 135%;
 }
 
 
@@ -822,10 +872,17 @@ h1{
   }
 /* USE OF GRID!! */
 
-.public-service{
-    display: grid;
-    grid-template-columns: repeat(2, 500px);
-    grid-template-rows: repeat(4,80px);
+
+.academic{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+
+}
+.science-scholarship{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
 
 }
 
@@ -889,7 +946,9 @@ h1{
     
     
     /* STORE */
-    
+    .about-back {
+  visibility: hidden;
+}
     a{
         text-decoration-style: none;
     
@@ -949,6 +1008,20 @@ h1{
     
     
     
+      #back-img{
+        display: block;
+        opacity: 0.7;
+        width: 60%;
+        height: 60%;
+        border: 5px solid black;
+        border-bottom: 10px solid black;
+
+      }
+      .about-back {
+        visibility: visible;
+        align-items: center;
+        justify-content: center;
+      }
       /* .product-card {
         display: inline-block;
       }
@@ -1080,7 +1153,14 @@ h1{
         
     
       }
-      
+      nav a:hover{
+        text-decoration-style: double;
+        background-color: burlywood;
+        padding: 30px;
+        color: black;
+    
+    
+    }
       a.skip:focus{
         top:20px;
         color: black;
@@ -1280,6 +1360,7 @@ h1{
         display: inline-block;
         
       } 
+
 }
 
 /* DESKTOP */
@@ -1291,12 +1372,7 @@ h1{
     html{
         scroll-behavior: auto; /* Removes scroll animation */
     }
-    nav a{
-        background-color: #00022e;
-        padding: 12px;
-        padding-bottom: 14px;
-        pointer-events: none;
-    }
+
 /* REFERENCE pointer-events to turn off hover: https://stackoverflow.com/questions/5069110/remove-hover-css-behavior-from-element */
     .skip a{
       -webkit-transition: none;
@@ -1307,8 +1383,23 @@ h1{
     header{
       background-attachment: initial;
     }
+    .about-flip:hover, .about-inner, .about-back, .about-front, .about-flip{
+      transform: none;
+      transition: none;
+      -webkit-transition: none; /* sets to default setting */
+  
+  }
+  #back-img{
+    display: none;
 
-}
+  }
+  .about-back {
+    visibility: hidden;
+  }
+   }
+
+
+
 /* From HW5 */
 
 /* ADD TO TABLET AND DESKTOP */
