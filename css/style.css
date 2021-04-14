@@ -218,10 +218,10 @@ nav a:active{
 /* UPPER CASE CURRENT NAV, same order */
 
 
-/* Got skip from hw6, will change code later */
+
 a.skip{ 
     
-    background: white;
+    background: burlywood;
     left: 0;
     padding: 2px; 
     position: absolute;
@@ -232,6 +232,7 @@ a.skip{
     transform: translateY(-100%); 
     -webkit-transition: translateY(-100%);
     transition: 0.5s;
+    top:-50px;
     /* TranslateY hides content until tab*/
     
 
@@ -697,6 +698,7 @@ a.skip{
     transform: translateY(-100%); 
     -webkit-transition: translateY(-100%);
     transition: 0.5s;
+    top:-50px;
     /* TranslateY hides content until tab*/
     
 
@@ -1098,7 +1100,8 @@ h1{
     /* In desktop version, maybe I will play with the spacing or can consider doing the same thing if it looks ok */
     nav{
         background-color: #005596;
-        margin-top:40px;
+        margin-top: 30px;
+        
     }
     
     
@@ -1144,19 +1147,22 @@ h1{
     /* UPPER CASE CURRENT NAV, same order */
     
     
-    /* Got skip from hw6, will change code later */
     a.skip{ 
         
         background: burlywood;
-        font-size: 30px;
-        top:60px;
         left: 0;
         padding: 2px; 
+        font-size: 1.3em;
         position: absolute;
+        /* top: -40px; */
         -webkit-transition: top 1s ease-out;
         transition: top 1s ease-out;
         z-index: 1;
-
+        transform: translateY(-100%); 
+        -webkit-transition: translateY(-100%);
+        transition: 0.5s;
+        top:-50px;
+        /* TranslateY hides content until tab*/
     
       }
       nav a:hover{
@@ -1372,6 +1378,10 @@ h1{
 /* DESKTOP */
 
 @media all and (prefers-reduced-motion: reduce){
+  .skip a{
+    -webkit-transition: none; 
+    transition: none;       
+   }
     img{
         animation:none
     }
