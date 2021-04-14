@@ -646,8 +646,6 @@ nav ul{
     list-style: none; /* From hw 5 */
     display: grid;
     justify-content: center;
-    grid-template-columns: 4; 
-    grid-template-rows: 1;
     padding-top: 20px;
     margin-bottom:-20px;
     grid-template-rows: auto;
@@ -962,8 +960,8 @@ h1{
     
     /* STORE */
     .about-back {
-  visibility: hidden;
-}
+    visibility: hidden;
+  }
     a{
         text-decoration-style: none;
     
@@ -1115,8 +1113,6 @@ h1{
         list-style: none; /* From hw 5 */
         display: grid;
         justify-content: left;
-        grid-template-columns: 6; 
-        grid-template-rows: 1;
         padding-top: 20px;
         margin-bottom:-20px;
         grid-template-rows: auto;
@@ -1282,7 +1278,7 @@ h1{
         margin: 25px;
         border-width: thick;
         border-bottom-style: solid;
-        line-height: 20px;
+        line-height: 50px;
         padding: 10px;
         padding-right: 7px;
         font-size: 170%;
@@ -1403,12 +1399,18 @@ h1{
       transform: none;
       transition: none;
       -webkit-transition: none; /* sets to default setting */
-  
+      visibility: hidden;
   }
   #back-img{
     display: none;
 
   }
+  #about-img{
+    visibility: hidden;
+    opacity: 0%;
+
+  }
+
   .about-back {
     visibility: hidden;
   }
