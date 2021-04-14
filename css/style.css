@@ -11,6 +11,13 @@
 #about-img{
   display: none;
 }
+#back-img{
+  display: none;
+
+}
+.about-back {
+  visibility: hidden;
+}
 
 html{
     scroll-behavior: smooth; 
@@ -543,8 +550,7 @@ a class cannot be inside another class, so I corrected the syntax*/
 /* REFERENCE: https://www.w3schools.com/howto/howto_css_flip_card.asp , changed class name and transition time */
 
 .about-flip:hover .about-inner {
-    transform: none; 
-    /* rotateY(180deg) */
+    transform: rotateY(180deg);
     transition: transform 0.4s;
 }
 
@@ -589,6 +595,7 @@ changed class name, background color*/
 
 
 #back-img{
+  display: block;
   opacity: 0.7;
   width: 60%;
   height: 60%;
@@ -718,7 +725,20 @@ a.skip{
 
 
 /* NOTABLE PEOPLE PAGE */
+#back-img{
+  display: block;
+  opacity: 0.7;
+  width: 60%;
+  height: 60%;
+  border: 5px solid black;
+  border-bottom: 10px solid black;
 
+}
+.about-back {
+  visibility: visible;
+  align-items: center;
+  justify-content: center;
+}
 
 .fig-notable{
     /* border: thin #E7A614 solid;
@@ -939,7 +959,9 @@ h1{
     
     
     /* STORE */
-    
+    .about-back {
+  visibility: hidden;
+}
     a{
         text-decoration-style: none;
     
@@ -999,6 +1021,23 @@ h1{
     
     
     
+      #back-img{
+        display: block;
+        opacity: 0.7;
+        margin-left: 115px;
+        width: 70%;
+        height: 70%;
+        border: 5px solid black;
+        border-bottom: 10px solid black;
+
+      }
+      .about-back {
+        visibility: visible;
+        margin-left: 28%;
+        margin-top: -571px;
+        width: 44%;
+        height: 49%;
+      }
       /* .product-card {
         display: inline-block;
       }
@@ -1026,15 +1065,13 @@ h1{
     /* ABOUT */
     
     #about-img{
-        display: flex;
-        justify-content: flex-start;
-        width: 95%;
-        height: 85%;
+        width: auto;
+        height: 55%;
         margin-top: 1.7em;
         margin-bottom: 2.5em;
-        align-items: center;
-        margin-left: 10px;
-        margin-right: 10px;
+        justify-content: center;
+        margin-left: 31%;
+        /* margin-right: -10px; */
         border-bottom: 5px solid black;
         
     }
@@ -1061,7 +1098,7 @@ h1{
     /* In desktop version, maybe I will play with the spacing or can consider doing the same thing if it looks ok */
     nav{
         background-color: #005596;
-        
+        margin-top:40px;
     }
     
     
@@ -1074,17 +1111,13 @@ h1{
     nav ul{
         list-style: none; /* From hw 5 */
         display: grid;
-        grid-gap: 15px;
-        justify-items: center;
-        justify-content: center;
-        /* grid-template-columns: 1; */
-        /* grid-template-rows: 4; */
+        justify-content: left;
+        grid-template-columns: 6; 
+        grid-template-rows: 1;
         padding-top: 20px;
         margin-bottom:-20px;
-        grid-template-columns: auto;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        /* margin-right: 40px; */
-    
+        grid-template-rows: auto;
+        grid-template-columns:   1fr 1fr 1fr 1fr 2fr;
     }
     /* UL (above) was all original except list-style*/
     nav a{
@@ -1114,20 +1147,16 @@ h1{
     /* Got skip from hw6, will change code later */
     a.skip{ 
         
-        background: white;
-        
+        background: burlywood;
+        font-size: 30px;
+        top:60px;
         left: 0;
         padding: 2px; 
         position: absolute;
-        /* top: -40px; */
         -webkit-transition: top 1s ease-out;
         transition: top 1s ease-out;
         z-index: 1;
-        transform: translateY(-100%); 
-        -webkit-transition: translateY(-100%);
-        transition: 0.5s;
-        /* TranslateY hides content until tab*/
-        
+
     
       }
       nav a:hover{
@@ -1337,6 +1366,7 @@ h1{
         display: inline-block;
         
       } 
+
 }
 
 /* DESKTOP */
